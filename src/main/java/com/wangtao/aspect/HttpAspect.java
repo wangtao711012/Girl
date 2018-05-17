@@ -52,7 +52,7 @@ public void log(){
     }
 
     /**
-     * 获取response中返回的参数.to_string()
+     * 打印日志获取response中返回的参数.to_string()
      * @param object
      */
     @AfterReturning(pointcut = "log()",returning = "object")
