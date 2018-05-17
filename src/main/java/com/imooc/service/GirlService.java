@@ -16,7 +16,7 @@ public class GirlService {
     @Autowired
     private GirlRepository girlRepository;
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void insertTwo() {
         Girl girlA = new Girl();
         girlA.setCupSize("A");
