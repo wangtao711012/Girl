@@ -1,7 +1,7 @@
-package com.imooc.service;
+package com.wangtao.service;
 
-import com.imooc.domain.Girl;
-import com.imooc.repository.GirlRepository;
+import com.wangtao.domain.Girl;
+import com.wangtao.repository.GirlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

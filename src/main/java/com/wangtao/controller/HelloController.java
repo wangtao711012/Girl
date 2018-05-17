@@ -1,6 +1,6 @@
-package com.imooc.controller;
+package com.wangtao.controller;
 
-import com.imooc.properties.GirlProperties;
+import com.wangtao.properties.GirlProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.imooc.domain;
+package com.wangtao.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

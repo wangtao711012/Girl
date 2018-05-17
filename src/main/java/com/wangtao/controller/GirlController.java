@@ -1,8 +1,8 @@
-package com.imooc.controller;
+package com.wangtao.controller;
 
-import com.imooc.domain.Girl;
-import com.imooc.repository.GirlRepository;
-import com.imooc.service.GirlService;
+import com.wangtao.domain.Girl;
+import com.wangtao.repository.GirlRepository;
+import com.wangtao.service.GirlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

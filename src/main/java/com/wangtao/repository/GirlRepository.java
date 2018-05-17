@@ -1,6 +1,6 @@
-package com.imooc.repository;
+package com.wangtao.repository;
 
-import com.imooc.domain.Girl;
+import com.wangtao.domain.Girl;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

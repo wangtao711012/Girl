@@ -1,4 +1,4 @@
-package com.imooc.properties;
+package com.wangtao.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
