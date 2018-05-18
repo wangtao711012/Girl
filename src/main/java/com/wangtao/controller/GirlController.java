@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,7 +40,7 @@ public class GirlController {
      * @return
      */
     @GetMapping(value = "/girladd")
-    public Girl girlAdd(Girl girl, BindingResult bindingResult) {
+    public Girl girlAdd(@Valid Girl girl, BindingResult bindingResult) {
         System.out.println(2222);
         if(bindingResult.hasErrors()){
             System.out.println(bindingResult.getFieldError().getDefaultMessage());

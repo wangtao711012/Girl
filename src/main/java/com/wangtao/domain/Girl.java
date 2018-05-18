@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by 廖师兄
@@ -19,6 +20,16 @@ public class Girl {
     private String cupSize;
     @Min(value=18,message = "未成年禁止入内")
     private Integer age;
+@NotNull
+    private Integer money;
+
+    public Integer getMoney() {
+        return money;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
+    }
 
     public Girl() {
     }
