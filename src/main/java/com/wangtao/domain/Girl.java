@@ -20,7 +20,7 @@ public class Girl {
     private String cupSize;
     @Min(value=18,message = "未成年禁止入内")
     private Integer age;
-@NotNull
+@NotNull(message = "money必填")
     private Integer money;
 
     public Integer getMoney() {

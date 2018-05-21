@@ -1,8 +1,10 @@
 package com.wangtao.controller;
 
 import com.wangtao.domain.Girl;
+import com.wangtao.domain.Result;
 import com.wangtao.repository.GirlRepository;
 import com.wangtao.service.GirlService;
+import com.wangtao.utils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -40,22 +42,28 @@ public class GirlController {
      * @return
      */
     @GetMapping(value = "/girladd")
-    public Girl girlAdd(@Valid Girl girl, BindingResult bindingResult) {
-        System.out.println(2222);
-        if(bindingResult.hasErrors()){
-            System.out.println(bindingResult.getFieldError().getDefaultMessage());
-            return null;
-        }
-        girl.setCupSize(girl.getCupSize());
-        girl.setAge(girl.getAge());
+    public Result<Girl> girlAdd(@Valid Girl girl, BindingResult bindingResult) {
 
-        return girlRepository.save(girl);
+        if(bindingResult.hasErrors()){
+
+        return ResultUtil.error(1, bindingResult.getFieldError().getDefaultMessage());
+        }
+            girl.setAge(girl.getAge());
+            girl.setCupSize(girl.getCupSize());
+            girl.setMoney(girl.getMoney());
+            girl.setId(girl.getId());
+
+
+        return ResultUtil.success(girlRepository.save(girl));
     }
 
     //查询一个女生
    @GetMapping(value = "/findone/{id}")
    public Girl findOne(@PathVariable("id") Integer id){
-    return girlRepository.findOne(id);
+
+
+
+        return girlRepository.findOne(id);
    }
 
     //更新
@@ -87,4 +95,11 @@ public class GirlController {
     public void girlTwo() {
         girlService.insertTwo();
     }
+    @GetMapping(value ="/girls/getage/{id}")
+    public void getAge(@PathVariable("id") Integer id){
+
+girlService.getAge(id);
+    }
+
+
 }

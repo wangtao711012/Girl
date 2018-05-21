@@ -29,4 +29,19 @@ public class GirlService {
         girlB.setAge(19);
         girlRepository.save(girlB);
     }
+
+    public void getAge(Integer id) {
+        Girl girl = girlRepository.getOne(id);
+        Integer age = girl.getAge();
+        if (age < 10) {
+            //你可能在上小学
+
+
+        } else if (age > 10 & age < 16) {
+            //你可能在上初中
+
+        }
+    }
+
+
 }
