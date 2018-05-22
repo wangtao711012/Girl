@@ -1,8 +1,12 @@
 package com.wangtao.domain;
 
 public class Result<T>{
-
+    //错误吗
     private Integer code;
+    //提示信息
+    private String msg;
+    //具体的内容
+    private T data;
 
     public Integer getCode() {
         return code;
@@ -28,8 +32,6 @@ public class Result<T>{
         this.data = data;
     }
 
-    private String msg;
-    private T data;
 
 
 

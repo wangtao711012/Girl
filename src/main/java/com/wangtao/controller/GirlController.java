@@ -96,9 +96,9 @@ public class GirlController {
         girlService.insertTwo();
     }
     @GetMapping(value ="/girls/getage/{id}")
-    public void getAge(@PathVariable("id") Integer id){
+    public void getAge(@PathVariable("id") Integer id)throws Exception{
 
-girlService.getAge(id);
+        girlService.getAge(id);
     }
 
 
